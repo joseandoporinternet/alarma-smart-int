@@ -1,0 +1,290 @@
+/* Reset */
+@import "leaflet/dist/leaflet.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#root {
+  height: 100vh;
+  padding: none;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+/* Encabezado */
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Navegación */
+header button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #d9d9d9;
+  color: #333;
+  font-weight: 700;
+}
+nav > button {
+  background-color: #282c34;
+  color: #d9d9d9;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.user-info p {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+/* Formularios */
+form input,
+form select {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+}
+input,
+select {
+  padding: 8px;
+  margin: 5px;
+  width: 200px;
+}
+form button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+li button {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #0056b3;
+}
+
+li button:nth-child(3) {
+  background-color: #dc3545;
+}
+
+li button:nth-child(3):hover {
+  background-color: #c82333;
+}
+
+/* Inputs edición inline */
+li input,
+li select {
+  padding: 6px;
+  margin: 4px 0;
+  width: 180px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #282c34;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.dashboard-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  overflow: hidden;
+  height: 100%; /* Ajusta la altura para que no se superponga con el header */
+  box-sizing: border-box;
+}
+.container > div {
+  max-height: 100%;
+  overflow: auto;
+}
+/* Estilo mapa */
+.leaflet-container {
+  margin-top: 20px;
+  height: 85%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usuarios-page {
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-container form {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.login-container form .login-header {
+  width: 100%;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container form .login-header img {
+  width: 100%;
+  padding: 20px;
+}
+.login-container form input {
+  width: 100%;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  border-left: 1px solid #282c34;
+  border-radius: 10px;
+  border-right: #282c34 1px solid;
+  background-color: #efefef ;
+
+
+}
+.login-container form input:focus {
+  border-top: #282c34 1px solid;
+  border-right: #282c34 1px solid;
+  border-bottom: #282c34 2px solid;
+}
+
+.login-container form button {
+  width: 50%;
+  background-color: white;
+  color: #333;
+  border-top: #282c34 1px solid;
+  border-bottom: #282c34 4px solid;
+  border-left: #282c34 1px solid;
+  border-right: #282c34 1px solid;
+
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in-out;
+
+}
+.login-container form button:hover {
+  background-color: #efefef ;
+  transform: scale(1.05);
+}
+.form-elements {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.formGenerator {
+  margin-top: 2rem;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.alarma-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
